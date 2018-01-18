@@ -20,7 +20,7 @@ let createActor = function (actorId,name,lastName,bio,birthDate,movieId) {
         return document.getElementById("prompt").style.display="block";
     }
     
-}();
+}
 
 // dodavanje glumca iz forme u localStorage
 document.getElementById("create").addEventListener("submit",addActorToLocalStroge());
@@ -53,14 +53,14 @@ let updateActor= function (actorId,key)
 {
     actors[actorId][key]=localStorage.getItem(key);
 
-}();
+}
 //  ovo ispod ubacuje biografiju gde je nije bilo
 //updateActor("aaa111","bio","ko je on sta je radio");
 
 let deleteActor = function (actorId) 
 {
     delete actors[actorId];
-}();
+}
 
 // ovo ispod brise saru iz actors
 //deleteActor("abc222");
@@ -72,14 +72,14 @@ let deleteActor = function (actorId)
 let saveToDatabase = function (key,object)
 {
     localStorage.setItem(key, JSON.stringify(object));   
-}();
+}
 //saveToDatabase("actorsJSON",actors);
 
 //Retrieving data:
 let loadFromDatabase = function (key) {
     
     return JSON.parse(localStorage.getItem(key));
-}();
+}
 
 
 //var myJSON = JSON.stringify(actors);
